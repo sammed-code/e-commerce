@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce | About Quirk</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="100"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Quirk</a>
+            <a href="service.html">Services</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Login/Register</a>
+        </div>
+    </nav>
+
+    <div class="aboutq">
+        <h2>About Quirks</h2>
+        <div class="about_content">
+            <p>A Quirk, formerly known as a Meta Ability, is a superhuman ability that a person can possess. Along with being unique to each user, Quirks are sorted into multiple categories. Quirk users are also limited to only developing one ability and are thus unable to achieve any other through natural means. Quirks are said to be the next stage of evolution in the human race. It is possible, though rudimentary, to diagnose a person as possessing or lacking a Quirk by analyzing the presence or absence of an extra joint in their pinky toe. People with only one joint tend to develop a Quirk, while having two joints usually indicates that the person is Quirkless. The lack of the extra joint makes a person's body more "streamlined", a secondary aspect of human evolution brought about by the emergence of Quirks.</p>
+        </div>
+        <hr>
+        <h2>Our Mission</h2>
+        <p>Our mission is to keep the safe and happy. Our mission is to protect everyone who are in danger and needs saving and we will do it no matter what.</p>
+    </div>
+
+    <div class="feed">
+        <h2>Write a Review</h2>
+        <div class="feed_form">
+            <form name="google-sheet" method="post">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Number" placeholder="Phone Number"><br>
+                <textarea rows="5" cols="7" name="Review" placeholder="Your Review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="f_logo">
+            <a href="index.html"><img src="images/logo.png" width="100"></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="#">About Us</a> |
+            <a href="#">Services</a> |
+            <a href="#">Blogs</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms Of Use</a> |
+            <a href="#">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> 
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://api.WhatsApp.com/send?phone=+919823977179" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> 
+            <a href="tel: +919823977179" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a> 
+            <a href="mailto: sakshamvip2009@gmail.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2022 My Hero Academia. All rights reserved</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCWh47cD0nRVsH5G34HI6t0XoU9CSE5-9YFPxId2MPxkcv74Fg1cIae1gNT12bfwhv/exec'
+        const form = document.forms['google-sheet']
+     
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for you valuable feedback!!!"))
+                .catch(error => console.error('Error!', error.message))
+        })
+     
+     </script>
+</body>
+</html>
